@@ -1,0 +1,14 @@
+.btn
+	position: relative
+	display: inline-block
+	padding: $buttons-paddings
+
+	@each $button in $buttons
+		+e(#{button})
+			@each $state in $button
+				@if $state not 'state'
+					+m(#{$state})
+						&:hover
+							background: nth($state, 1)
+				@else
+					background: nth($state, 1)

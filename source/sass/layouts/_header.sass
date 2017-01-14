@@ -1,0 +1,26 @@
+.header
+	+e(wrapper)
+		+display(flex)
+		+flex-direction(row)
+		+align-content(center)
+		+align-items(center)
+		+justify-content(space-between)
+		padding: rem(11) 0 rem(16) 0
+		+breakpoint(m)
+			padding: rem(23) 0 rem(42) 0
+	+e(logo)
+		+flex(0 0 auto)
+	+e(address)
+		display: none
+		text-align: center
+		+breakpoint(l)
+			display: block
+			+flex(0 0 auto)
+	+e(phone)
+		+flex(0 0 auto)
+		text-align: center
+		+e(link)
+			font-size: rem(30)
+			display: block
+			text-decoration: none
+			color: $base-color-text

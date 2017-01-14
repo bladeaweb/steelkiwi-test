@@ -8,3 +8,14 @@ body
   padding: 0
 body
   min-width: $min-window-width
+  background: $base-color-bg
+  color: $base-color-text
+.container
+  display: block
+  width: 100%
+  max-width: $container-width
+  margin: 0 auto
+  padding: 0 $container-padding-horizontal
+  font-size: $header-address-font-size
+  +breakpoint(xl)
+    padding: 0$container-padding-horizontal-xl
