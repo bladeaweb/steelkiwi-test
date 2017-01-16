@@ -1,0 +1,54 @@
+.footer
+  background: $footer-bg
+  color: $footer-color
+  font-size: 1rem
+  padding: 1rem 0
+  +breakpoint(xl)
+    padding: 2rem 0
+  a
+    color: $footer-color
+  +e(list)
+    margin: 0
+    padding: 0
+    list-style: none
+  +e(container)
+    text-align: center
+    +display(flex)
+    +flex-direction(row)
+    +flex-wrap(wrap)
+    +align-content(center)
+    +align-items(center)
+    +justify-content(space-between)
+    +breakpoint(s)
+      text-align: left
+  +e(item)
+    +flex(1 1 100%)
+    +order(0)
+    +breakpoint(s)
+      margin-right: 1rem
+      +flex(1 1 auto)
+      &:last-child
+        margin-right: 0
+  +e(phone)
+    text-decoration: none
+    +e(wrap)
+      +order(1)
+      padding: rem(30) 0
+      +breakpoint(s)
+        padding: 0
+        +order(0)
+      +breakpoint(l)
+        text-align: right
+  +e(address)
+    +order(2)
+    +breakpoint(s)
+      +order(0)
+  +e(logo)
+    display: none
+    +breakpoint(s)
+      display: block
+  +e(link)
+    li
+      line-height: 2
+      +breakpoint(s)
+        line-height: inherit

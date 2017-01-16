@@ -1,0 +1,6 @@
+mixin carousel_img(list)
+  div(class=list.class)
+    each item in list.items
+      div(class=list.itemClass)
+        a(href=item.link)
+          img(class=list.imgClass src=item.img)

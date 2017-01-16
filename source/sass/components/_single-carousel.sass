@@ -1,0 +1,47 @@
+.single-carousel
+  +e(item)
+  +display(flex)
+  +flex-direction(row)
+  +flex-wrap(nowrap)
+  +justify-content(center)
+  +align-content(center)
+  +align-items(center)
+  +breakpoint(s)
+    +flex-wrap(wrap)
+  .slick-list
+    +flex(1 1 calc(100% - 40px))
+    padding: 1.5rem
+    +breakpoint(s)
+      +flex(1 1 100%)
+  +e(prev)
+    +flex(1 1 auto)
+    cursor: pointer
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 10px 16px 10px 0
+    border-color: transparent $base-color-element transparent transparent
+    &:hover
+      border-color: transparent $base-color-element-hover transparent transparent
+    +breakpoint(s)
+      +flex(0 0 auto)
+      border-width: 0 10px 16px 10px
+      border-color: transparent transparent $base-color-element transparent
+      &:hover
+        border-color: transparent transparent $base-color-element-hover transparent
+  +e(next)
+    +flex(1 1 auto)
+    cursor: pointer
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 10px 0 10px 16px
+    border-color: transparent transparent transparent $base-color-element
+    &:hover
+      border-color: transparent transparent transparent $base-color-element-hover
+    +breakpoint(s)
+      +flex(0 0 auto)
+      border-width: 16px 10px 0 10px
+      border-color: $base-color-element transparent transparent transparent
+      &:hover
+        border-color: $base-color-element-hover transparent transparent transparent

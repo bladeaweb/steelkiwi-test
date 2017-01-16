@@ -1,0 +1,73 @@
+mixin news-list(news_list)
+  each item in news_list
+    article.news__tiser
+      .news__tiser__img
+        img(src=item.img).img__rounded.img__bordered.img__shadow.img__full
+      .news__tiser__description
+        h2.news__tiser__title=item.title
+        .news__tiser__body=item.body
+        .news__tiser__read-more
+          a(href=item.link).btn.btn__default Узнать больше
+-
+  var news = [
+  {
+    link: "#",
+    img: "img/sqd/1.jpg",
+    title: "Фрезерные работы",
+    body: "Медиамикс продуцирует охват аудитории. Исходя из структуры пирамиды Маслоу, рекламный клаттер раскручивает инструмент маркетинга."
+  },
+  {
+    link: "#",
+    img: "img/sqd/2.jpg",
+    title: "Токарные работы",
+    body: "Медиамикс продуцирует охват аудитории. Исходя из структуры пирамиды Маслоу, рекламный клаттер раскручивает инструмент маркетинга."
+  },
+  {
+    link: "#",
+    img: "img/sqd/3.jpg",
+    title: "Изготовление деталей по чертежам заказчика",
+    body: "Медиамикс продуцирует охват аудитории. Исходя из структуры пирамиды Маслоу, рекламный клаттер раскручивает инструмент маркетинга."
+  },
+  {
+    link: "#",
+    img: "img/sqd/4.jpg",
+    title: "Сварочные и сборочные работы",
+    body: "Медиамикс продуцирует охват аудитории. Исходя из структуры пирамиды Маслоу, рекламный клаттер раскручивает инструмент маркетинга."
+  }
+  ]
+-
+  var singleCarousel = {
+    class: "single-carousel js-single-carousel",
+    itemClass: "single-carousel__item",
+    imgClass: "img__rounded img__bordered img__shadow img__full",
+    items: [
+      {
+        link: "#",
+        img: "img/sqd/1.jpg"
+      },
+      {
+      link: "#",
+      img: "img/sqd/2.jpg"
+      },
+      {
+      link: "#",
+      img: "img/sqd/3.jpg"
+      },
+      {
+      link: "#",
+      img: "img/sqd/4.jpg"
+      }
+    ]
+  }
+section.main-page__section-news
+  .container
+    .main-page__news-and-catalog
+      .main-page__news
+        +news-list(news)
+      .main-page__catalog
+        .main-page__tools
+          h2.component__title Наше оборудование
+          +carousel_img(singleCarousel)
+        .main-page__production
+          h2.component__title Наша продукция
+          +carousel_img(singleCarousel)

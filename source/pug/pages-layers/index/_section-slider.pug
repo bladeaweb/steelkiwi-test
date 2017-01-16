@@ -1,0 +1,45 @@
+-
+  var gridList = {
+    class: "grid__list",
+    itemClass: "grid__list__item",
+    imageContainerClass: "grid__list__item__container",
+    imageWrapperClass: "grid__list__item__wrapper",
+    imgs: [
+      'img/main-page-slider/1.jpg',
+      'img/main-page-slider/2.jpg',
+      'img/main-page-slider/3.jpg',
+      'img/main-page-slider/4.jpg',
+      'img/main-page-slider/5.jpg',
+      'img/main-page-slider/6.jpg',
+      'img/main-page-slider/7.jpg',
+      'img/main-page-slider/8.jpg',
+      'img/main-page-slider/9.jpg',
+      'img/main-page-slider/10.jpg'
+    ]
+  }
+section.main-page__slider
+  .grid.js-grid-slider
+    +main-slider-list(gridList)
+  .main-page__slider__form__wrapper
+    .container
+      .main-page__slider__form__container
+        h2.main-page__slider__form__title
+          |Изготовление деталей из металла по вашим чертежам
+        h3.main-page__slider__form__sub-title
+          |В поиске компании по металлообработке? Отправьте ваш
+          |  запрос для оценки стоимости
+        forn.main-page__slider__form
+          .main-page__slider__form__item
+            input(type="text" placeholder="Ваше имя").main-page__slider__form__input
+          .main-page__slider__form__item
+            input(type="text" placeholder="Телефон").main-page__slider__form__input
+          .main-page__slider__form__item
+            input(type="email" placeholder="email").main-page__slider__form__input
+          .main-page__slider__form__item__info-mobile
+            | * Если требуется отправить чертеж, перейдите на&nbsp;
+            a(href="#") форму заказа
+          .main-page__slider__form__item
+            input(type="submit" value="Отпавить").main-page__slider__form__submit.btn.btn__submit
+      .main-page__slider__form__info
+        |* Если требуется отправить чертеж, перейдите на&nbsp;
+        a(href="#") форму заказа

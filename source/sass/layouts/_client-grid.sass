@@ -1,0 +1,15 @@
+.client-grid
+  +display(flex)
+  +flex-wrap(wrap)
+  +flex-direction(row)
+  +align-content(center)
+  +align-items(center)
+  +justify-content(space-between)
+  +e(item)
+    +flex(1 1 100%)
+    text-align: center
+    padding: 1rem 0.5rem
+    +breakpoint(s)
+      +flex(1 1 50%)
+    +breakpoint(m)
+      +flex(1 1 33%)

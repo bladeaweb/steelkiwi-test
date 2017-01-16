@@ -4,22 +4,294 @@
     <title>Test workflow</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.min.css">
   </head>
 </html>
 <body>
+  <div class="loader js-loader">
+    <svg class="circular" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+    </svg>
+  </div>
   <header class="header">
     <section class="header__section">
       <div class="container">
         <div class="header__wrapper">
-          <div class="header__logo"><a class="header__logo_link"><img class="header__logo__img" src="img/logo.png" alt="Ресурс"></a></div>
+          <div class="header__logo"><a class="header__logo_link" href="#"><img class="header__logo__img" src="img/logo.png" alt="Ресурс"></a></div>
           <div class="header__address">Производство:<br>г. Санкт-Петербург, Колпино<br>Ижорский завод, пр. Ленина, д.1</div>
-          <div class="header__phone"><a class="header__phone__link" href="call:88000000000">8 800 000 00 00</a><a class="btn btn__default btn__default--hover" href="#">Обратный звонок</a></div>
+          <div class="header__phone"><a class="header__phone__link" href="call:88000000000">8 800 000 00 00</a><a class="btn btn__default" href="#">Обратный звонок</a></div>
         </div>
       </div>
     </section>
+    <nav class="main-menu">
+      <div class="container">
+        <ul class="main-menu__list js-flex-menu">
+          <li class="main-menu__list__item"><a class="main-menu__list__link main-menu__link--hover" href="#">О компании</a>
+          </li>
+          <li class="main-menu__list__item"><a class="main-menu__list__link main-menu__link--hover" href="#">Оборудование</a>
+          </li>
+          <li class="main-menu__list__item"><a class="main-menu__list__link main-menu__link--hover" href="#">Виды работ</a>
+          </li>
+          <li class="main-menu__list__item"><a class="main-menu__list__link main-menu__link--hover" href="#">Изделия</a>
+          </li>
+          <li class="main-menu__list__item"><a class="main-menu__list__link main-menu__link--hover" href="#">Рекомендации</a>
+          </li>
+          <li class="main-menu__list__item"><a class="main-menu__list__link main-menu__link--hover" href="#">Вакинсии</a>
+          </li>
+          <li class="main-menu__list__item"><a class="main-menu__list__link main-menu__link--hover" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
-  <h1>Test workflow for Alexander Sharkov</h1>
-  <script>window.jQuery || document.write('<script src="js/vendors/jquery.min.js"><\/script>');</script>
+  <section class="main-page__slider">
+    <div class="grid js-grid-slider">
+      <ul class="grid__list">
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/1.jpg"/></span></a></li>
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/2.jpg"/></span></a></li>
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/3.jpg"/></span></a></li>
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/4.jpg"/></span></a></li>
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/5.jpg"/></span></a></li>
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/6.jpg"/></span></a></li>
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/7.jpg"/></span></a></li>
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/8.jpg"/></span></a></li>
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/9.jpg"/></span></a></li>
+        <li class="grid__list__item"><a class="grid__list__item__container"><span class="grid__list__item__wrapper"><img src="img/main-page-slider/10.jpg"/></span></a></li>
+      </ul>
+    </div>
+    <div class="main-page__slider__form__wrapper">
+      <div class="container">
+        <div class="main-page__slider__form__container">
+          <h2 class="main-page__slider__form__title">Изготовление деталей из металла по вашим чертежам</h2>
+          <h3 class="main-page__slider__form__sub-title">
+            В поиске компании по металлообработке? Отправьте ваш
+             запрос для оценки стоимости
+          </h3>
+          <forn class="main-page__slider__form">
+            <div class="main-page__slider__form__item">
+              <input class="main-page__slider__form__input" type="text" placeholder="Ваше имя">
+            </div>
+            <div class="main-page__slider__form__item">
+              <input class="main-page__slider__form__input" type="text" placeholder="Телефон">
+            </div>
+            <div class="main-page__slider__form__item">
+              <input class="main-page__slider__form__input" type="email" placeholder="email">
+            </div>
+            <div class="main-page__slider__form__item__info-mobile">* Если требуется отправить чертеж, перейдите на&nbsp;<a href="#">форму заказа</a></div>
+            <div class="main-page__slider__form__item">
+              <input class="main-page__slider__form__submit btn btn__submit" type="submit" value="Отпавить">
+            </div>
+          </forn>
+        </div>
+        <div class="main-page__slider__form__info">* Если требуется отправить чертеж, перейдите на&nbsp;<a href="#">форму заказа</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="main-page__section-news">
+    <div class="container">
+      <div class="main-page__news-and-catalog">
+        <div class="main-page__news">
+            <article class="news__tiser">
+              <div class="news__tiser__img"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/1.jpg"></div>
+              <div class="news__tiser__description">
+                <h2 class="news__tiser__title">Фрезерные работы</h2>
+                <div class="news__tiser__body">Медиамикс продуцирует охват аудитории. Исходя из структуры пирамиды Маслоу, рекламный клаттер раскручивает инструмент маркетинга.</div>
+                <div class="news__tiser__read-more"><a class="btn btn__default" href="#">Узнать больше</a></div>
+              </div>
+            </article>
+            <article class="news__tiser">
+              <div class="news__tiser__img"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/2.jpg"></div>
+              <div class="news__tiser__description">
+                <h2 class="news__tiser__title">Токарные работы</h2>
+                <div class="news__tiser__body">Медиамикс продуцирует охват аудитории. Исходя из структуры пирамиды Маслоу, рекламный клаттер раскручивает инструмент маркетинга.</div>
+                <div class="news__tiser__read-more"><a class="btn btn__default" href="#">Узнать больше</a></div>
+              </div>
+            </article>
+            <article class="news__tiser">
+              <div class="news__tiser__img"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/3.jpg"></div>
+              <div class="news__tiser__description">
+                <h2 class="news__tiser__title">Изготовление деталей по чертежам заказчика</h2>
+                <div class="news__tiser__body">Медиамикс продуцирует охват аудитории. Исходя из структуры пирамиды Маслоу, рекламный клаттер раскручивает инструмент маркетинга.</div>
+                <div class="news__tiser__read-more"><a class="btn btn__default" href="#">Узнать больше</a></div>
+              </div>
+            </article>
+            <article class="news__tiser">
+              <div class="news__tiser__img"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/4.jpg"></div>
+              <div class="news__tiser__description">
+                <h2 class="news__tiser__title">Сварочные и сборочные работы</h2>
+                <div class="news__tiser__body">Медиамикс продуцирует охват аудитории. Исходя из структуры пирамиды Маслоу, рекламный клаттер раскручивает инструмент маркетинга.</div>
+                <div class="news__tiser__read-more"><a class="btn btn__default" href="#">Узнать больше</a></div>
+              </div>
+            </article>
+        </div>
+        <div class="main-page__catalog">
+          <div class="main-page__tools">
+            <h2 class="component__title">Наше оборудование</h2>
+            <div class="single-carousel js-single-carousel">
+              <div class="single-carousel__item"><a href="#"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/1.jpg"/></a></div>
+              <div class="single-carousel__item"><a href="#"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/2.jpg"/></a></div>
+              <div class="single-carousel__item"><a href="#"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/3.jpg"/></a></div>
+              <div class="single-carousel__item"><a href="#"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/4.jpg"/></a></div>
+            </div>
+          </div>
+          <div class="main-page__production">
+            <h2 class="component__title">Наша продукция</h2>
+            <div class="single-carousel js-single-carousel">
+              <div class="single-carousel__item"><a href="#"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/1.jpg"/></a></div>
+              <div class="single-carousel__item"><a href="#"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/2.jpg"/></a></div>
+              <div class="single-carousel__item"><a href="#"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/3.jpg"/></a></div>
+              <div class="single-carousel__item"><a href="#"><img class="img__rounded img__bordered img__shadow img__full" src="img/sqd/4.jpg"/></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main-page__section-cert">
+    <div class="container">
+      <h2 class="component__title center">Гарантируем качество изделий</h2>
+      <div class="main-page__section-cert__container">
+        <div class="cert"><img class="img__max-100" src="img/cert/cert.jpg"></div>
+        <div class="info">
+          <div class="info__row">
+            <div class="info__row__icon"><img src="img/cert/icons/1.png"></div>
+            <div class="info__row__text">Производство сертифицировано ГОСТ ISO 9001</div>
+          </div>
+          <div class="info__row">
+            <div class="info__row__icon"><img src="img/cert/icons/2.png"></div>
+            <div class="info__row__text">Заводское качество и низкие цены</div>
+          </div>
+          <div class="info__row">
+            <div class="info__row__icon"><img src="img/cert/icons/3.png"></div>
+            <div class="info__row__text">Обновляемый и модернизируемый парк станков</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="main-page__section-cliets">
+    <div class="container">
+      <h2 class="component__title center">Наши заказчики</h2>
+      <h5 class="component__small-sub-title center">Предприятия крупного, среднего и точного машиностроения</h5>
+    </div>
+    <div class="tabs__wrapper">
+      <div class="container">
+        <ul class="tabs">
+          <li class="active" rel="tab1">
+            <div class="tabs__link">Машиностроительные предприятия</div>
+            <div class="tabs__link--active">Машиностроительные предприятия</div>
+          </li>
+          <li rel="tab2">
+            <div class="tabs__link">Производители пишевой продукции</div>
+            <div class="tabs__link--active">Производители пишевой продукции</div>
+          </li>
+          <li rel="tab3">
+            <div class="tabs__link">предприятия специального машиностроения</div>
+            <div class="tabs__link--active">предприятия специального машиностроения</div>
+          </li>
+          <li rel="tab4">
+            <div class="tabs__link">Оборонные предприятия</div>
+            <div class="tabs__link--active">Оборонные предприятия</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tabs__container">
+      <div class="tab__container">
+        <div class="tab__drawer-heading d__active" rel="tab1">
+          <div class="container">
+            <div class="tab-link">Машиностроительные предприятия<span class="arrow"></span></div>
+          </div>
+        </div>
+        <div class="tab__content" id="tab1">
+          <div class="container">
+            <div class="client-grid">
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/1.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/5.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/2.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/3.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/4.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/6.jpg"></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="tab__drawer-heading" rel="tab2">
+          <div class="container">
+            <div class="tab-link">Производители пишевой продукции<span class="arrow"></span></div>
+          </div>
+        </div>
+        <div class="tab__content" id="tab2">
+          <div class="container">
+            <div class="client-grid">
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/1.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/3.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/5.jpg"></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="tab__drawer-heading" rel="tab3">
+          <div class="container">
+            <div class="tab-link">предприятия специального машиностроения<span class="arrow"></span></div>
+          </div>
+        </div>
+        <div class="tab__content" id="tab3">
+          <div class="container">
+            <div class="client-grid">
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/1.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/2.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/3.jpg"></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="tab__drawer-heading" rel="tab4">
+          <div class="container">
+            <div class="tab-link">Оборонные предприятия<span class="arrow"></span></div>
+          </div>
+        </div>
+        <div class="tab__content" id="tab4">
+          <div class="container">
+            <div class="client-grid">
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/4.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/5.jpg"></a></div>
+                <div class="client-grid__item"><a href="#"><img class="img__max-100" src="img/clients/6.jpg"></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__container">
+        <div class="footer__item footer__logo"><a href="#"><img class="img__max-100" src="img/footer__logo.png"></a></div>
+        <nav class="footer__item footer__link">
+          <ul class="footer__list">
+            <li class="footer__list__item"><a href="#">Механообработка деталей</a></li>
+            <li class="footer__list__item"><a href="#">Токарные работы</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__item footer__link">
+          <ul class="footer__list">
+            <li class="footer__list__item"><a href="#">Фрезеровка деталей</a></li>
+            <li class="footer__list__item"><a href="#">Фрезерный работы</a></li>
+          </ul>
+        </nav>
+        <div class="footer__item footer__address">г. Санкт-Петербург, Колпино <br> Ижорский завод, пр. Ленина, д.1</div>
+        <div class="footer__item footer__phone__wrap">
+          <ul class="footer__list">
+            <li class="footer__list__item"><a class="footer__phone" href="call:88000000000">8 800 000 00 00</a></li>
+            <li class="footer__list__item"><a href="#">НАПИСАТЬ ДИРЕКТОРУ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendors/jquery.min.js"><\/script>');</script>
+  <script src="js/vendors/modernizr.custom.js"></script>
+  <script src="js/vendors/flexmenu.min.js"></script>
+  <script src="js/vendors/jquery.gridrotator.js"></script>
+  <script src="js/vendors/slick.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/vendors/extrimSimpleTabsAccordion.js"></script>
 </body>

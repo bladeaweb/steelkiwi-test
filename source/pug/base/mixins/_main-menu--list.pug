@@ -1,0 +1,5 @@
+mixin main-menu-list(list)
+  ul(class=list.class)
+    each item in list.list.items
+      li(class=list.list.listClass)
+        +link(item.link, item.text)(class=list.list.itemClass)

@@ -1,0 +1,134 @@
+.main-menu
+  background: $main-menu-bg
+  color: $main-menu-color
+  text-transform: uppercase
+  font-size: $main-menu-font-size
+  position: relative
+  z-index: 9
+  +e(list)
+    list-style: none
+    margin: 0
+    padding: 0
+    +display(flex)
+    +flex-direction(row)
+    +flex-wrap(wrap)
+    +align-content(center)
+    +justify-content(space-between)
+    &>li
+      +flex(1 1 auto)
+      padding: 0 rem(25) 0 rem(20)
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        width: $main-menu-dot-size
+        height: $main-menu-dot-size
+        border-radius: $br-r
+        background: $main-menu-color
+        left: 100%
+        top: 50%
+        +transform(translateX(-50%) translateY(-50%))
+      &>a
+        text-align: center
+        position: relative
+        &:after
+          content: ""
+          position: absolute
+          width: 100%
+          height: rem(2)
+          bottom: 0
+          left: 0
+          visibility: hidden
+          +transform(translateY(100%))
+          background: $main-menu-color
+          +transition(0.3s)
+        &.active,
+        &:hover
+          &:after
+            visibility: visible
+            +transform(translateY(0))
+      &:last-child
+        padding-right: 0
+        &:after
+          display: none
+      &:first-child
+        padding-left: 0
+    +e(link)
+      display: block
+      color: $main-menu-color
+      text-decoration: none
+      height: $main-menu-height
+      line-height: $main-menu-height * 1.1
+    .flexMenu
+      &-viewMore
+        &>a
+          display: block
+          color: $main-menu-color
+          text-decoration: none
+          height: $main-menu-height
+          line-height: $main-menu-height
+        &.active
+          &>a
+            &:after
+              visibility: visible
+              +transform(translateY(0))
+      &-allInPopup
+        &>a
+          text-align: right
+      &-popup
+        background: $main-menu-bg
+        list-style: none
+        margin: 0
+        padding: 0
+        overflow: hidden
+        &>li
+          &>a
+            position: relative
+            padding: 0 1rem
+            &:after
+              content: ""
+              position: absolute
+              width: rem(2)
+              height: 100%
+              bottom: 0
+              left: 0
+              background: $main-menu-color
+              +transform(translateX(-100%))
+              opacity: 1
+              visibility: hidden
+              +transition(0.3s)
+            &.active,
+            &:hover
+              &:after
+                +transform(translateX(0))
+                opacity: 1
+                visibility: visible
+.no-touch
+  .main-menu
+    height: $main-menu-height
+    overflow: hidden
+    &:hover
+      overflow: visible
+    .flexMenu
+      &-popup
+        right: 0
+        top: 100%
+.touch
+  .main-menu
+    overflow: visible
+    .flexMenu
+      &-popup
+        position: relative !important
+        +breakpoint(s)
+          right: 0
+          top: 100%
+          position: absolute !important
+      &-viewMore
+        &>a
+          &:hover
+            &:after
+              display: none
+        &.active
+          &>a
+            &:after
+              display: block

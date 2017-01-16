@@ -1,0 +1,20 @@
+-
+  var main_menu = {
+    class: 'main-menu__list js-flex-menu',
+    list: {
+      listClass: 'main-menu__list__item',
+      itemClass: 'main-menu__list__link main-menu__link--hover',
+      items: [
+        {text: 'О компании', link: '#'},
+        {text: 'Оборудование', link: '#'},
+        {text: 'Виды работ', link: '#'},
+        {text: 'Изделия',link: '#'},
+        {text: 'Рекомендации',link: '#'},
+        {text: 'Вакинсии',link: '#'},
+        {text: 'Контакты',link: '#'}
+      ]
+    }
+  }
+nav.main-menu
+  .container
+    +main-menu-list(main_menu)

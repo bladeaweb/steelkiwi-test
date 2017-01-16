@@ -2,13 +2,21 @@
 	position: relative
 	display: inline-block
 	padding: $buttons-paddings
+	text-decoration: none
+	text-transform: uppercase
+	height: $buttons-height
+	line-height: 1.8
+	font-size: $buttons-font-size
+	border: 0
+	+transition(0.5s)
 
-	@each $button in $buttons
-		+e(#{button})
-			@each $state in $button
-				@if $state not 'state'
-					+m(#{$state})
-						&:hover
-							background: nth($state, 1)
+	@each $key, $button in $buttons
+		+e(#{$key})
+			@each $key, $attrs in $button
+				@if $key != 'state'
+					&:#{$key}
+						@each $key, $value in $attrs
+							#{$key}: $value
 				@else
-					background: nth($state, 1)
+					@each $key, $value in $attrs
+						#{$key}: $value

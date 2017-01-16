@@ -1,5 +1,6 @@
 ///Global
 $dark: #000
+$dark-light: #2b2a28
 $light: #fff
 ///Base
 $base-color-bg: $light
@@ -7,4 +8,14 @@ $base-color-text: $dark
 $base-color-element: #ff8400
 $base-color-element-hover: #ff4e00
 ///Buttons
-$buttons: (default:(state:($base-color-element, $light), hover:($base-color-element-hover, $light)))
+$button-default: (state:(background: $base-color-element, color: $light), hover:(background: $base-color-element-hover, color: $light))
+$button-submit: (state:(background: #f39c3e, color: $dark), hover:(background: $base-color-element-hover, color: $light))
+$buttons: (default: $button-default, submit: $button-submit)
+///Main-menu
+$main-menu-bg: $base-color-element
+$main-menu-color: $light
+///Main-slider
+$main-slider-bg: #fdc029
+///Footer
+$footer-bg: $dark
+$footer-color: $light

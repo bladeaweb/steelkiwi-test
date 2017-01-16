@@ -1,0 +1,70 @@
+mixin clientGridItem(img, link)
+  .client-grid__item
+    a(href=link)
+      img(src=img).img__max-100
+
+.main-page__section-cliets
+  .container
+    h2.component__title.center Наши заказчики
+    h5.component__small-sub-title.center
+      |Предприятия крупного, среднего и точного машиностроения
+  .tabs__wrapper
+    .container
+      ul.tabs
+        li(rel="tab1").active
+          .tabs__link Машиностроительные предприятия
+          .tabs__link--active Машиностроительные предприятия
+        li(rel="tab2")
+          .tabs__link Производители пишевой продукции
+          .tabs__link--active Производители пишевой продукции
+        li(rel="tab3")
+          .tabs__link предприятия специального машиностроения
+          .tabs__link--active предприятия специального машиностроения
+        li(rel="tab4")
+          .tabs__link Оборонные предприятия
+          .tabs__link--active Оборонные предприятия
+  .tabs__container
+    .tab__container
+      .tab__drawer-heading.d__active(rel="tab1")
+        .container
+          .tab-link Машиностроительные предприятия
+            span.arrow
+      #tab1.tab__content
+        .container
+          .client-grid
+            +clientGridItem("img/clients/1.jpg", "#")
+            +clientGridItem("img/clients/5.jpg", "#")
+            +clientGridItem("img/clients/2.jpg", "#")
+            +clientGridItem("img/clients/3.jpg", "#")
+            +clientGridItem("img/clients/4.jpg", "#")
+            +clientGridItem("img/clients/6.jpg", "#")
+      .tab__drawer-heading(rel="tab2")
+        .container
+          .tab-link Производители пишевой продукции
+            span.arrow
+      #tab2.tab__content
+        .container
+          .client-grid
+            +clientGridItem("img/clients/1.jpg", "#")
+            +clientGridItem("img/clients/3.jpg", "#")
+            +clientGridItem("img/clients/5.jpg", "#")
+      .tab__drawer-heading(rel="tab3")
+        .container
+          .tab-link предприятия специального машиностроения
+            span.arrow
+      #tab3.tab__content
+        .container
+          .client-grid
+            +clientGridItem("img/clients/1.jpg", "#")
+            +clientGridItem("img/clients/2.jpg", "#")
+            +clientGridItem("img/clients/3.jpg", "#")
+      .tab__drawer-heading(rel="tab4")
+        .container
+          .tab-link Оборонные предприятия
+            span.arrow
+      #tab4.tab__content
+        .container
+          .client-grid
+            +clientGridItem("img/clients/4.jpg", "#")
+            +clientGridItem("img/clients/5.jpg", "#")
+            +clientGridItem("img/clients/6.jpg", "#")

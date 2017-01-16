@@ -1,19 +1,9 @@
 ///Mixin
 ///Element
-@mixin element($element)
+@mixin e($element)
 	&__#{$element}
 		@content
 ///Modifier
-@mixin modifier($modifier)
-	&--#{$modifier}
-		@content
-
-///Aliases
-/// @alias element
-@mixin e($element)
-	+element($element)
-		@content
-/// @alias modifier
 @mixin m($modifier)
-	+modifier($modifier)
+	&--#{$modifier}
 		@content

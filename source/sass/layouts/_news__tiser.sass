@@ -1,0 +1,30 @@
+.news
+  +e(tiser)
+    +display(flex)
+    +flex-direction(row)
+    +flex-wrap(nowrap)
+    +align-content(flex-star)
+    +align-items(flex-star)
+    +justify-content(flex-start)
+    +e(img)
+      display: none
+      +breakpoint(m)
+        display: block
+        +flex(1 1 29%)
+        padding-right: rem(20)
+    +e(description)
+      +flex(1 1 100%)
+      +breakpoint(m)
+        +flex(1 1 71%)
+    +e(title)
+      font-size: rem(30)
+      font-weight: $fw-r
+      text-transform: uppercase
+      margin: 0 0 1rem 0
+      line-height: 1.2
+      +breakpoint(xl)
+        margin: 0.3125rem 0 1rem 0
+    +e(body)
+      font-size: rem(18)
+      font-weight: $fw-r
+      margin-bottom: 1rem

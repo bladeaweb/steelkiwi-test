@@ -1,0 +1,7 @@
+mixin main-slider-list(list)
+  ul(class=list.class)
+    each item in list.imgs
+      li(class=list.itemClass)
+        a(class=list.imageContainerClass)
+          span(class=list.imageWrapperClass)
+            img(src=item)
